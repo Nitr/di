@@ -14,7 +14,7 @@ class App < Sinatra::Base
 
   before do
     data_store = container.resolve(:data_store)
-    data_store[:current_ip] = '95.81.209.168'
+    data_store[:current_ip] = request.ip
   end
 
   get '/' do
